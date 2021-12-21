@@ -1,0 +1,80 @@
+==========================================
+SLURM_JOB_ID = 242154
+SLURM_NODELIST = gnode50
+SLURM_JOB_GPUS = 2
+==========================================
+sending incremental file list
+checkpoint_best.pt
+checkpoint_last.pt
+
+sent 1,425,352,638 bytes  received 54 bytes  20,508,671.83 bytes/sec
+total size is 1,562,044,208  speedup is 1.10
+sending incremental file list
+created directory /ssd_scratch/cvit/asvs/data/complete-en-ml
+./
+.DS_Store
+dev.ml-en.en
+dev.ml-en.ml
+test.ml-en.en
+test.ml-en.ml
+train.ml-en.en
+train.ml-en.ml
+
+sent 9,695,075 bytes  received 217 bytes  2,770,083.43 bytes/sec
+total size is 44,019,472  speedup is 4.54
+preprocess_cvit.py:14: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  data = yaml.load(contents)
+LMDB(/ssd_scratch/cvit/asvs/data/complete-en-ml/test.ml-en.en) does not exist. Building
+Loaded /ssd_scratch/cvit/asvs/data/complete-en-ml/test.ml-en.en
+Built LMDB(/ssd_scratch/cvit/asvs/data/complete-en-ml/test.ml-en.en)
+LMDB(/ssd_scratch/cvit/asvs/data/complete-en-ml/test.ml-en.ml) does not exist. Building
+Loaded /ssd_scratch/cvit/asvs/data/complete-en-ml/test.ml-en.ml
+Built LMDB(/ssd_scratch/cvit/asvs/data/complete-en-ml/test.ml-en.ml)
+LMDB(/ssd_scratch/cvit/asvs/data/complete-en-ml/dev.ml-en.en) does not exist. Building
+Loaded /ssd_scratch/cvit/asvs/data/complete-en-ml/dev.ml-en.en
+Built LMDB(/ssd_scratch/cvit/asvs/data/complete-en-ml/dev.ml-en.en)
+LMDB(/ssd_scratch/cvit/asvs/data/complete-en-ml/dev.ml-en.ml) does not exist. Building
+Loaded /ssd_scratch/cvit/asvs/data/complete-en-ml/dev.ml-en.ml
+Built LMDB(/ssd_scratch/cvit/asvs/data/complete-en-ml/dev.ml-en.ml)
+LMDB(/ssd_scratch/cvit/asvs/data/complete-en-ml/train.ml-en.en) does not exist. Building
+Loaded /ssd_scratch/cvit/asvs/data/complete-en-ml/train.ml-en.en
+Built LMDB(/ssd_scratch/cvit/asvs/data/complete-en-ml/train.ml-en.en)
+LMDB(/ssd_scratch/cvit/asvs/data/complete-en-ml/train.ml-en.ml) does not exist. Building
+Loaded /ssd_scratch/cvit/asvs/data/complete-en-ml/train.ml-en.ml
+Built LMDB(/ssd_scratch/cvit/asvs/data/complete-en-ml/train.ml-en.ml)
+
+
+EVALUATING ON CKPT_BEST
+------------------------------------
+/home2/asvs/fairseq-working/fairseq/tasks/cvit_translation.py:149: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  data = yaml.load(contents)
+BLEU BLEU = 1.29, 18.3/1.7/0.6/0.2 (BP=0.897, ratio=0.902, hyp_len=31373, ref_len=34798)
+
+
+
+EVALUATING ON CKPT_LAST
+-----------------------
+/home2/asvs/fairseq-working/fairseq/tasks/cvit_translation.py:149: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  data = yaml.load(contents)
+BLEU BLEU = 1.59, 20.9/2.4/0.8/0.3 (BP=0.829, ratio=0.842, hyp_len=29298, ref_len=34798)
+
+sending incremental file list
+best.hyp.00
+best.ref.00
+checkpoint_best_translations.txt
+checkpoint_last_translations.txt
+complete.best.hyp
+complete.best.ref
+complete.last.hyp
+complete.last.ref
+last.hyp.00
+last.ref.00
+
+sent 2,978,659 bytes  received 206 bytes  1,985,910.00 bytes/sec
+total size is 13,291,045  speedup is 4.46
+sending incremental file list
+checkpoint_best.pt
+checkpoint_last.pt
+
+sent 1,562,425,718 bytes  received 54 bytes  84,455,447.14 bytes/sec
+total size is 1,562,044,208  speedup is 1.00

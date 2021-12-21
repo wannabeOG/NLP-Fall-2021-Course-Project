@@ -1,0 +1,118 @@
+==========================================
+SLURM_JOB_ID = 242138
+SLURM_NODELIST = gnode50
+SLURM_JOB_GPUS = 2
+==========================================
+preprocess_cvit.py:14: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  data = yaml.load(contents)
+LMDB(/ssd_scratch/cvit/asvs/data/complete-en-ml/train.ml-en.en) does not exist. Building
+LMDB(/ssd_scratch/cvit/asvs/data/complete-en-ml/dev.ml-en.ml) does not exist. Building
+LMDB(/ssd_scratch/cvit/asvs/data/complete-en-ml/test.ml-en.ml) does not exist. Building
+LMDB(/ssd_scratch/cvit/asvs/data/complete-en-ml/train.ml-en.ml) does not exist. Building
+LMDB(/ssd_scratch/cvit/asvs/data/complete-en-ml/dev.ml-en.en) does not exist. Building
+LMDB(/ssd_scratch/cvit/asvs/data/complete-en-ml/test.ml-en.en) does not exist. Building
+
+
+EVALUATING ON CKPT_BEST
+------------------------------------
+/home2/asvs/fairseq-working/fairseq/tasks/cvit_translation.py:149: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  data = yaml.load(contents)
+Traceback (most recent call last):
+  File "generate.py", line 190, in <module>
+    cli_main()
+  File "generate.py", line 186, in cli_main
+    main(args)
+  File "generate.py", line 33, in main
+    task.load_dataset(args.gen_subset)
+  File "/home2/asvs/fairseq-working/fairseq/tasks/cvit_translation.py", line 197, in load_dataset
+    max_target_positions=self.args.max_target_positions,
+  File "/home2/asvs/fairseq-working/fairseq/tasks/cvit_translation.py", line 38, in load_langpair_dataset
+    x, y = wrapped(src, tgt)
+  File "/home2/asvs/fairseq-working/fairseq/tasks/cvit_translation.py", line 33, in wrapped
+    left_dataset = CVITIndexedRawTextDataset(left, tokenizer, dictionary, tgt_lang=right.lang)
+  File "/home2/asvs/fairseq-working/fairseq/data/cvit/dataset.py", line 43, in __init__
+    self.dataset = self._maybe_read(corpus, tokenizer)
+  File "/home2/asvs/fairseq-working/fairseq/data/cvit/dataset.py", line 53, in _maybe_read
+    raw_dataset = _CVITIndexedRawTextDataset(corpus, tokenizer)
+  File "/home2/asvs/fairseq-working/fairseq/data/cvit/dataset.py", line 18, in __init__
+    self.read_data(corpus, tokenizer)
+  File "/home2/asvs/fairseq-working/fairseq/data/cvit/dataset.py", line 22, in read_data
+    with open(corpus.path, 'r', encoding='utf-8') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/ssd_scratch/cvit/asvs/data/complete-en-ml/test.ml-en.en'
+Traceback (most recent call last):
+  File "/home/dataset/packages/python/3.7/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/dataset/packages/python/3.7/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home2/asvs/wateval/wateval/evaluate.py", line 127, in <module>
+    main()
+  File "/home2/asvs/wateval/wateval/evaluate.py", line 121, in main
+    evaluator = Evaluator.build(args)
+  File "/home2/asvs/wateval/wateval/evaluate.py", line 60, in build
+    return cls(args.references, args.hypothesis, args.lang)
+  File "/home2/asvs/wateval/wateval/evaluate.py", line 41, in __init__
+    lang = self.infer_langs(src)
+  File "/home2/asvs/wateval/wateval/evaluate.py", line 64, in infer_langs
+    first_line = next(open(fname)).strip()
+FileNotFoundError: [Errno 2] No such file or directory: '/ssd_scratch/cvit/asvs/data/complete-en-ml/test.ml-en.ml'
+
+
+EVALUATING ON CKPT_LAST
+-----------------------
+/home2/asvs/fairseq-working/fairseq/tasks/cvit_translation.py:149: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  data = yaml.load(contents)
+Traceback (most recent call last):
+  File "generate.py", line 190, in <module>
+    cli_main()
+  File "generate.py", line 186, in cli_main
+    main(args)
+  File "generate.py", line 33, in main
+    task.load_dataset(args.gen_subset)
+  File "/home2/asvs/fairseq-working/fairseq/tasks/cvit_translation.py", line 197, in load_dataset
+    max_target_positions=self.args.max_target_positions,
+  File "/home2/asvs/fairseq-working/fairseq/tasks/cvit_translation.py", line 38, in load_langpair_dataset
+    x, y = wrapped(src, tgt)
+  File "/home2/asvs/fairseq-working/fairseq/tasks/cvit_translation.py", line 33, in wrapped
+    left_dataset = CVITIndexedRawTextDataset(left, tokenizer, dictionary, tgt_lang=right.lang)
+  File "/home2/asvs/fairseq-working/fairseq/data/cvit/dataset.py", line 43, in __init__
+    self.dataset = self._maybe_read(corpus, tokenizer)
+  File "/home2/asvs/fairseq-working/fairseq/data/cvit/dataset.py", line 53, in _maybe_read
+    raw_dataset = _CVITIndexedRawTextDataset(corpus, tokenizer)
+  File "/home2/asvs/fairseq-working/fairseq/data/cvit/dataset.py", line 18, in __init__
+    self.read_data(corpus, tokenizer)
+  File "/home2/asvs/fairseq-working/fairseq/data/cvit/dataset.py", line 22, in read_data
+    with open(corpus.path, 'r', encoding='utf-8') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/ssd_scratch/cvit/asvs/data/complete-en-ml/test.ml-en.en'
+Traceback (most recent call last):
+  File "/home/dataset/packages/python/3.7/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/dataset/packages/python/3.7/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home2/asvs/wateval/wateval/evaluate.py", line 127, in <module>
+    main()
+  File "/home2/asvs/wateval/wateval/evaluate.py", line 121, in main
+    evaluator = Evaluator.build(args)
+  File "/home2/asvs/wateval/wateval/evaluate.py", line 60, in build
+    return cls(args.references, args.hypothesis, args.lang)
+  File "/home2/asvs/wateval/wateval/evaluate.py", line 41, in __init__
+    lang = self.infer_langs(src)
+  File "/home2/asvs/wateval/wateval/evaluate.py", line 64, in infer_langs
+    first_line = next(open(fname)).strip()
+FileNotFoundError: [Errno 2] No such file or directory: '/ssd_scratch/cvit/asvs/data/complete-en-ml/test.ml-en.ml'
+sending incremental file list
+checkpoint_best_translations.txt
+checkpoint_last_translations.txt
+complete.best.hyp
+complete.best.ref
+complete.last.hyp
+complete.last.ref
+
+sent 2,096 bytes  received 130 bytes  1,484.00 bytes/sec
+total size is 3,242  speedup is 1.46
+sending incremental file list
+rsync: link_stat "/ssd_scratch/cvit/asvs/checkpoints/checkpoint_last.pt" failed: No such file or directory (2)
+rsync: link_stat "/ssd_scratch/cvit/asvs/checkpoints/checkpoint_best.pt" failed: No such file or directory (2)
+
+sent 18 bytes  received 12 bytes  60.00 bytes/sec
+total size is 0  speedup is 0.00
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1183) [sender=3.1.1]

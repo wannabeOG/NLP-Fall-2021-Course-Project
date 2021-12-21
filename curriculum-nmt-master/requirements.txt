@@ -1,0 +1,9 @@
+torch==1.4.0
+torchvision==0.5.0
+torchtext==0.5.0
+transformers==2.4.1
+pytorch-nlp
+docopt
+nltk
+tensorboard
+matplotlib

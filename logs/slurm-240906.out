@@ -1,0 +1,19 @@
+==========================================
+SLURM_JOB_ID = 240906
+SLURM_NODELIST = gnode59
+SLURM_JOB_GPUS = 0
+==========================================
+sending incremental file list
+.DS_Store
+dev.ml-en.en
+dev.ml-en.ml
+test.ml-en.en
+test.ml-en.ml
+train.ml-en.en
+train.ml-en.ml
+
+sent 9,695,072 bytes  received 149 bytes  2,770,063.14 bytes/sec
+total size is 44,019,472  speedup is 4.54
+preprocess_cvit.py:14: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  data = yaml.load(contents)
+slurmstepd: error: *** JOB 240906 ON gnode59 CANCELLED AT 2020-10-20T16:42:31 ***

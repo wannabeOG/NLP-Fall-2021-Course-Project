@@ -1,0 +1,250 @@
+==========================================
+SLURM_JOB_ID = 241596
+SLURM_NODELIST = gnode61
+SLURM_JOB_GPUS = 3
+==========================================
+sending incremental file list
+checkpoint_last.pt
+
+sent 684,834,753 bytes  received 35 bytes  18,762,596.93 bytes/sec
+total size is 781,024,599  speedup is 1.14
+sending incremental file list
+dev.mr-en.en
+dev.mr-en.mr
+test.mr-en.en
+test.mr-en.mr
+train.mr-en.en
+train.mr-en.mr
+
+sent 9,910,065 bytes  received 130 bytes  2,831,484.29 bytes/sec
+total size is 37,591,885  speedup is 3.79
+preprocess_cvit.py:14: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  data = yaml.load(contents)
+Namespace(activation_dropout=0.1, activation_fn='relu', adam_betas='(0.9, 0.999)', adam_eps=1e-08, adaptive_input=False, adaptive_softmax_cutoff=None, adaptive_softmax_dropout=0, arch='transformer', attention_dropout=0.1, best_checkpoint_metric='loss', bpe=None, bucket_cap_mb=25, clip_norm=25, cpu=False, criterion='label_smoothed_cross_entropy', curriculum=0, data='config.yaml', dataset_impl=None, ddp_backend='no_c10d', decoder_attention_heads=8, decoder_embed_dim=512, decoder_embed_path=None, decoder_ffn_embed_dim=2048, decoder_input_dim=512, decoder_layers=6, decoder_learned_pos=False, decoder_normalize_before=False, decoder_output_dim=512, device_id=0, disable_validation=False, distributed_backend='nccl', distributed_init_method=None, distributed_no_spawn=False, distributed_port=-1, distributed_rank=0, distributed_world_size=1, dropout=0.1, encoder_attention_heads=8, encoder_embed_dim=512, encoder_embed_path=None, encoder_ffn_embed_dim=2048, encoder_layers=6, encoder_learned_pos=False, encoder_normalize_before=False, find_unused_parameters=False, fix_batches_to_gpus=False, force_anneal=None, fp16=False, fp16_init_scale=128, fp16_scale_tolerance=0.0, fp16_scale_window=None, keep_interval_updates=-1, keep_last_epochs=-1, label_smoothing=0.0, lazy_load=False, left_pad_source='True', left_pad_target='False', log_format='simple', log_interval=200, lr=[0.0001], lr_scheduler='fixed', lr_shrink=0.1, max_epoch=85, max_sentences=None, max_sentences_valid=None, max_source_positions=1024, max_target_positions=1024, max_tokens=5000, max_tokens_valid=5000, max_update=0, maximize_best_checkpoint_metric=False, memory_efficient_fp16=False, min_loss_scale=0.0001, min_lr=1e-09, no_epoch_checkpoints=False, no_last_checkpoints=False, no_progress_bar=False, no_save=False, no_save_optimizer_state=False, no_token_positional_embeddings=False, num_workers=0, optimizer='adam', optimizer_overrides='{}', raw_text=False, required_batch_size_multiple=8, reset_dataloader=False, reset_lr_scheduler=False, reset_meters=False, reset_optimizer=True, restore_file='checkpoint_last.pt', save_dir='/ssd_scratch/cvit/asvs/checkpoints', save_interval=1, save_interval_updates=0, seed=1, sentence_avg=False, share_all_embeddings=True, share_decoder_input_output_embed=False, skip_invalid_size_inputs_valid_test=False, source_lang=None, target_lang=None, task='shared-multilingual-translation', tbmf_wrapper=False, tensorboard_logdir='', threshold_loss_scale=None, tokenizer=None, train_subset='train', update_freq=[2], upsample_primary=1, use_bmuf=False, user_dir=None, valid_subset='valid', validate_interval=1, warmup_updates=0, weight_decay=0.0)
+| [None] dictionary: 40897 types
+| [None] dictionary: 40897 types
+Initialized LMDB: /ssd_scratch/cvit/asvs/data/pib-en-mar/dev.mr-en.mr
+Initialized LMDB: /ssd_scratch/cvit/asvs/data/pib-en-mar/dev.mr-en.en
+TransformerModel(
+  (encoder): TransformerEncoder(
+    (embed_tokens): Embedding(40897, 512, padding_idx=1)
+    (embed_positions): SinusoidalPositionalEmbedding()
+    (layers): ModuleList(
+      (0): TransformerEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (self_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+      )
+      (1): TransformerEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (self_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+      )
+      (2): TransformerEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (self_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+      )
+      (3): TransformerEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (self_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+      )
+      (4): TransformerEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (self_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+      )
+      (5): TransformerEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (self_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+      )
+    )
+  )
+  (decoder): TransformerDecoder(
+    (embed_tokens): Embedding(40897, 512, padding_idx=1)
+    (embed_positions): SinusoidalPositionalEmbedding()
+    (layers): ModuleList(
+      (0): TransformerDecoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (self_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (encoder_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (encoder_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+      )
+      (1): TransformerDecoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (self_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (encoder_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (encoder_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+      )
+      (2): TransformerDecoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (self_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (encoder_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (encoder_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+      )
+      (3): TransformerDecoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (self_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (encoder_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (encoder_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+      )
+      (4): TransformerDecoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (self_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (encoder_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (encoder_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+      )
+      (5): TransformerDecoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (self_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (encoder_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (encoder_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+      )
+    )
+  )
+)
+| model transformer, criterion LabelSmoothedCrossEntropyCriterion
+| num. model params: 65077760 (num. trained: 65077760)
+| training on 1 GPUs
+| max tokens per GPU = 5000 and max sentences per GPU = None
+| loaded checkpoint /ssd_scratch/cvit/asvs/checkpoints/checkpoint_last.pt (epoch 81 @ 0 updates)
+| NOTICE: your device may support faster training with --fp16
+| loading train data for epoch 81
+Initialized LMDB: /ssd_scratch/cvit/asvs/data/pib-en-mar/train.mr-en.mr
+Initialized LMDB: /ssd_scratch/cvit/asvs/data/pib-en-mar/train.mr-en.en
+| epoch 082:    200 / 337 loss=1.475, nll_loss=1.475, ppl=2.78, wps=11015, ups=1, wpb=7887.612, bsz=243.343, num_updates=201, lr=0.0001, gnorm=1.223, clip=0.000, oom=0.000, wall=146, train_wall=174794
+| epoch 082 | loss 1.488 | nll_loss 1.488 | ppl 2.80 | wps 11006 | ups 1 | wpb 7858.211 | bsz 239.644 | num_updates 337 | lr 0.0001 | gnorm 1.226 | clip 0.000 | oom 0.000 | wall 242 | train_wall 174864
+| epoch 082 | valid on 'valid' subset | loss 3.377 | nll_loss 3.377 | ppl 10.39 | num_updates 337
+| saved checkpoint /ssd_scratch/cvit/asvs/checkpoints/checkpoint82.pt (epoch 82 @ 337 updates) (writing took 4.837282657623291 seconds)
+| epoch 083:    200 / 337 loss=1.450, nll_loss=1.450, ppl=2.73, wps=11011, ups=1, wpb=7863.642, bsz=236.537, num_updates=538, lr=0.0001, gnorm=1.228, clip=0.000, oom=0.000, wall=400, train_wall=174967
+| epoch 083 | loss 1.456 | nll_loss 1.456 | ppl 2.74 | wps 10983 | ups 1 | wpb 7858.211 | bsz 239.644 | num_updates 674 | lr 0.0001 | gnorm 1.227 | clip 0.000 | oom 0.000 | wall 497 | train_wall 175036
+| epoch 083 | valid on 'valid' subset | loss 3.416 | nll_loss 3.416 | ppl 10.68 | num_updates 674 | best_loss 3.37703
+| saved checkpoint /ssd_scratch/cvit/asvs/checkpoints/checkpoint83.pt (epoch 83 @ 674 updates) (writing took 2.7529871463775635 seconds)
+| epoch 084:    200 / 337 loss=1.425, nll_loss=1.425, ppl=2.68, wps=10929, ups=1, wpb=7804.751, bsz=240.239, num_updates=875, lr=0.0001, gnorm=1.238, clip=0.000, oom=0.000, wall=653, train_wall=175140
+| epoch 084 | loss 1.433 | nll_loss 1.433 | ppl 2.70 | wps 10985 | ups 1 | wpb 7858.211 | bsz 239.644 | num_updates 1011 | lr 0.0001 | gnorm 1.239 | clip 0.000 | oom 0.000 | wall 750 | train_wall 175210
+| epoch 084 | valid on 'valid' subset | loss 3.406 | nll_loss 3.406 | ppl 10.60 | num_updates 1011 | best_loss 3.37703
+| saved checkpoint /ssd_scratch/cvit/asvs/checkpoints/checkpoint84.pt (epoch 84 @ 1011 updates) (writing took 2.762850046157837 seconds)
+| epoch 085:    200 / 337 loss=1.410, nll_loss=1.410, ppl=2.66, wps=11007, ups=1, wpb=7865.761, bsz=236.816, num_updates=1212, lr=0.0001, gnorm=1.225, clip=0.000, oom=0.000, wall=906, train_wall=175313
+| epoch 085 | loss 1.410 | nll_loss 1.410 | ppl 2.66 | wps 10978 | ups 1 | wpb 7858.211 | bsz 239.644 | num_updates 1348 | lr 0.0001 | gnorm 1.228 | clip 0.000 | oom 0.000 | wall 1003 | train_wall 175383
+| epoch 085 | valid on 'valid' subset | loss 3.441 | nll_loss 3.441 | ppl 10.86 | num_updates 1348 | best_loss 3.37703
+/home2/asvs/fairseq-working/fairseq/tasks/cvit_translation.py:149: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  data = yaml.load(contents)
+| saved checkpoint /ssd_scratch/cvit/asvs/checkpoints/checkpoint85.pt (epoch 85 @ 1348 updates) (writing took 2.733076810836792 seconds)
+| done training in 1014.1 seconds
+
+
+EVALUATING ON CKPT_BEST
+------------------------------------
+/home2/asvs/fairseq-working/fairseq/tasks/cvit_translation.py:149: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  data = yaml.load(contents)
+/home2/asvs/wateval/wateval/evaluate.py:49: UserWarning: Hypothesis Language seem to be different, please check?
+  warnings.warn("Hypothesis Language seem to be different, please check?")
+BLEU BLEU = 0.19, 8.5/0.1/0.1/0.0 (BP=1.000, ratio=1.103, hyp_len=107046, ref_len=97087)
+
+BLEU BLEU = 15.11, 50.1/21.7/11.4/6.2 (BP=0.909, ratio=0.913, hyp_len=108834, ref_len=119191)
+
+
+
+EVALUATING ON CKPT_LAST
+-----------------------
+/home2/asvs/fairseq-working/fairseq/tasks/cvit_translation.py:149: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  data = yaml.load(contents)
+/home2/asvs/wateval/wateval/evaluate.py:49: UserWarning: Hypothesis Language seem to be different, please check?
+  warnings.warn("Hypothesis Language seem to be different, please check?")
+BLEU BLEU = 0.19, 8.4/0.1/0.1/0.0 (BP=1.000, ratio=1.098, hyp_len=106580, ref_len=97087)
+
+BLEU BLEU = 14.98, 50.0/21.7/11.4/6.2 (BP=0.897, ratio=0.902, hyp_len=107559, ref_len=119191)
+
+sending incremental file list
+backtranslated.txt
+best.hyp.00
+best.hyp.01
+best.ref.00
+best.ref.01
+checkpoint_best_translations.txt
+checkpoint_last_translations.txt
+complete.best.hyp
+complete.best.ref
+complete.last.hyp
+complete.last.ref
+last.hyp.00
+last.hyp.01
+last.ref.00
+last.ref.01
+
+sent 7,404,359 bytes  received 301 bytes  2,961,864.00 bytes/sec
+total size is 23,468,444  speedup is 3.17
+sending incremental file list
+checkpoint_best.pt
+checkpoint_last.pt
+
+sent 1,562,428,692 bytes  received 54 bytes  80,124,551.08 bytes/sec
+total size is 1,562,047,184  speedup is 1.00

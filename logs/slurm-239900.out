@@ -1,0 +1,32 @@
+==========================================
+SLURM_JOB_ID = 239900
+SLURM_NODELIST = gnode39
+SLURM_JOB_GPUS = 0,1,2,3
+==========================================
+sending incremental file list
+checkpoint_best.pt
+checkpoint_last.pt
+
+sent 1,371,891,967 bytes  received 54 bytes  20,944,916.35 bytes/sec
+total size is 1,562,048,338  speedup is 1.14
+sending incremental file list
+dev.mr-en.en
+dev.mr-en.mr
+test.mr-en.en
+test.mr-en.mr
+train.mr-en.en
+train.mr-en.mr
+
+sent 9,910,059 bytes  received 130 bytes  2,831,482.57 bytes/sec
+total size is 37,591,885  speedup is 3.79
+sending incremental file list
+bt.en
+clean_monolingual.mr
+monolingual.mr
+scores.txt
+
+sent 28,229,561 bytes  received 92 bytes  2,454,752.43 bytes/sec
+total size is 148,333,533  speedup is 5.25
+/home2/asvs/fairseq-working/fairseq/tasks/cvit_translation.py:149: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  data = yaml.load(contents)
+slurmstepd: error: *** JOB 239900 ON gnode39 CANCELLED AT 2020-10-19T08:16:31 ***

@@ -1,0 +1,11 @@
+==========================================
+SLURM_JOB_ID = 241334
+SLURM_NODELIST = gnode56
+SLURM_JOB_GPUS = 1
+==========================================
+sending incremental file list
+checkpoint_best.pt
+slurmstepd: error: *** JOB 241334 ON gnode56 CANCELLED AT 2020-10-20T23:02:44 ***
+
+sent 684,869,682 bytes  received 35 bytes  21,072,914.37 bytes/sec
+total size is 781,024,392  speedup is 1.14

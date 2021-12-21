@@ -1,0 +1,374 @@
+==========================================
+SLURM_JOB_ID = 236113
+SLURM_NODELIST = gnode49
+SLURM_JOB_GPUS = 0
+==========================================
+sending incremental file list
+checkpoint_last.pt
+
+sent 686,184,131 bytes  received 35 bytes  21,113,358.95 bytes/sec
+total size is 781,024,159  speedup is 1.14
+skipping directory .
+sending incremental file list
+created directory /ssd_scratch/cvit/asvs/data/complete-en-ml
+./
+bt.en
+dev.ml-en.en
+dev.ml-en.ml
+filtered_ml.en
+filtered_ml.ml
+monoling.ml
+test.ml-en.en
+test.ml-en.en (Original)
+test.ml-en.ml
+test.ml-en.ml (Original)
+train.ml-en.en
+train.ml-en.ml
+
+sent 33,574,178 bytes  received 312 bytes  2,919,520.87 bytes/sec
+total size is 134,532,273  speedup is 4.01
+preprocess_cvit.py:14: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  data = yaml.load(contents)
+LMDB(/ssd_scratch/cvit/asvs/data/complete-en-ml/dev.ml-en.ml) does not exist. Building
+Loaded /ssd_scratch/cvit/asvs/data/complete-en-ml/dev.ml-en.ml
+Built LMDB(/ssd_scratch/cvit/asvs/data/complete-en-ml/dev.ml-en.ml)
+LMDB(/ssd_scratch/cvit/asvs/data/complete-en-ml/dev.ml-en.en) does not exist. Building
+Loaded /ssd_scratch/cvit/asvs/data/complete-en-ml/dev.ml-en.en
+Built LMDB(/ssd_scratch/cvit/asvs/data/complete-en-ml/dev.ml-en.en)
+LMDB(/ssd_scratch/cvit/asvs/data/complete-en-ml/test.ml-en.ml) does not exist. Building
+Loaded /ssd_scratch/cvit/asvs/data/complete-en-ml/test.ml-en.ml
+Built LMDB(/ssd_scratch/cvit/asvs/data/complete-en-ml/test.ml-en.ml)
+LMDB(/ssd_scratch/cvit/asvs/data/complete-en-ml/test.ml-en.en) does not exist. Building
+Loaded /ssd_scratch/cvit/asvs/data/complete-en-ml/test.ml-en.en
+Built LMDB(/ssd_scratch/cvit/asvs/data/complete-en-ml/test.ml-en.en)
+LMDB(/ssd_scratch/cvit/asvs/data/complete-en-ml/train.ml-en.en) does not exist. Building
+Loaded /ssd_scratch/cvit/asvs/data/complete-en-ml/train.ml-en.en
+Built LMDB(/ssd_scratch/cvit/asvs/data/complete-en-ml/train.ml-en.en)
+LMDB(/ssd_scratch/cvit/asvs/data/complete-en-ml/train.ml-en.ml) does not exist. Building
+Loaded /ssd_scratch/cvit/asvs/data/complete-en-ml/train.ml-en.ml
+Built LMDB(/ssd_scratch/cvit/asvs/data/complete-en-ml/train.ml-en.ml)
+Namespace(activation_dropout=0.1, activation_fn='relu', adam_betas='(0.9, 0.999)', adam_eps=1e-08, adaptive_input=False, adaptive_softmax_cutoff=None, adaptive_softmax_dropout=0, arch='transformer', attention_dropout=0.1, best_checkpoint_metric='loss', bpe=None, bucket_cap_mb=25, clip_norm=25, cpu=False, criterion='label_smoothed_cross_entropy', curriculum=0, data='config.yaml', dataset_impl=None, ddp_backend='no_c10d', decoder_attention_heads=8, decoder_embed_dim=512, decoder_embed_path=None, decoder_ffn_embed_dim=2048, decoder_input_dim=512, decoder_layers=6, decoder_learned_pos=False, decoder_normalize_before=False, decoder_output_dim=512, device_id=0, disable_validation=False, distributed_backend='nccl', distributed_init_method=None, distributed_no_spawn=False, distributed_port=-1, distributed_rank=0, distributed_world_size=1, dropout=0.1, encoder_attention_heads=8, encoder_embed_dim=512, encoder_embed_path=None, encoder_ffn_embed_dim=2048, encoder_layers=6, encoder_learned_pos=False, encoder_normalize_before=False, find_unused_parameters=False, fix_batches_to_gpus=False, force_anneal=None, fp16=False, fp16_init_scale=128, fp16_scale_tolerance=0.0, fp16_scale_window=None, keep_interval_updates=-1, keep_last_epochs=-1, label_smoothing=0.0, lazy_load=False, left_pad_source='True', left_pad_target='False', log_format='simple', log_interval=200, lr=[0.0001], lr_scheduler='fixed', lr_shrink=0.1, max_epoch=60, max_sentences=None, max_sentences_valid=None, max_source_positions=1024, max_target_positions=1024, max_tokens=5000, max_tokens_valid=5000, max_update=0, maximize_best_checkpoint_metric=False, memory_efficient_fp16=False, min_loss_scale=0.0001, min_lr=1e-09, no_epoch_checkpoints=False, no_last_checkpoints=False, no_progress_bar=False, no_save=False, no_save_optimizer_state=False, no_token_positional_embeddings=False, num_workers=0, optimizer='adam', optimizer_overrides='{}', raw_text=False, required_batch_size_multiple=8, reset_dataloader=False, reset_lr_scheduler=False, reset_meters=False, reset_optimizer=True, restore_file='checkpoint_last.pt', save_dir='/ssd_scratch/cvit/asvs/checkpoints', save_interval=1, save_interval_updates=0, seed=1, sentence_avg=False, share_all_embeddings=True, share_decoder_input_output_embed=False, skip_invalid_size_inputs_valid_test=False, source_lang=None, target_lang=None, task='shared-multilingual-translation', tbmf_wrapper=False, tensorboard_logdir='', threshold_loss_scale=None, tokenizer=None, train_subset='train', update_freq=[2], upsample_primary=1, use_bmuf=False, user_dir=None, valid_subset='valid', validate_interval=1, warmup_updates=0, weight_decay=0.0)
+| [None] dictionary: 40897 types
+| [None] dictionary: 40897 types
+Initialized LMDB: /ssd_scratch/cvit/asvs/data/complete-en-ml/dev.ml-en.en
+Initialized LMDB: /ssd_scratch/cvit/asvs/data/complete-en-ml/dev.ml-en.ml
+TransformerModel(
+  (encoder): TransformerEncoder(
+    (embed_tokens): Embedding(40897, 512, padding_idx=1)
+    (embed_positions): SinusoidalPositionalEmbedding()
+    (layers): ModuleList(
+      (0): TransformerEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (self_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+      )
+      (1): TransformerEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (self_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+      )
+      (2): TransformerEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (self_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+      )
+      (3): TransformerEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (self_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+      )
+      (4): TransformerEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (self_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+      )
+      (5): TransformerEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (self_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+      )
+    )
+  )
+  (decoder): TransformerDecoder(
+    (embed_tokens): Embedding(40897, 512, padding_idx=1)
+    (embed_positions): SinusoidalPositionalEmbedding()
+    (layers): ModuleList(
+      (0): TransformerDecoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (self_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (encoder_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (encoder_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+      )
+      (1): TransformerDecoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (self_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (encoder_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (encoder_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+      )
+      (2): TransformerDecoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (self_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (encoder_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (encoder_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+      )
+      (3): TransformerDecoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (self_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (encoder_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (encoder_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+      )
+      (4): TransformerDecoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (self_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (encoder_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (encoder_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+      )
+      (5): TransformerDecoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (self_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (encoder_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (encoder_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+      )
+    )
+  )
+)
+| model transformer, criterion LabelSmoothedCrossEntropyCriterion
+| num. model params: 65077760 (num. trained: 65077760)
+| training on 1 GPUs
+| max tokens per GPU = 5000 and max sentences per GPU = None
+| loaded checkpoint /ssd_scratch/cvit/asvs/checkpoints/checkpoint_last.pt (epoch 35 @ 0 updates)
+| NOTICE: your device may support faster training with --fp16
+| loading train data for epoch 35
+Initialized LMDB: /ssd_scratch/cvit/asvs/data/complete-en-ml/train.ml-en.en
+Initialized LMDB: /ssd_scratch/cvit/asvs/data/complete-en-ml/train.ml-en.ml
+| epoch 035:    600 / 798 loss=3.069, nll_loss=3.069, ppl=8.39, wps=11270, ups=1, wpb=8394.709, bsz=277.126, num_updates=103, lr=0.0001, gnorm=1.499, clip=0.000, oom=0.000, wall=77, train_wall=149086
+| epoch 035 | loss 2.961 | nll_loss 2.961 | ppl 7.79 | wps 11234 | ups 1 | wpb 8133.437 | bsz 271.413 | num_updates 300 | lr 0.0001 | gnorm 1.457 | clip 0.000 | oom 0.000 | wall 217 | train_wall 149183
+| epoch 035 | valid on 'valid' subset | loss 3.198 | nll_loss 3.198 | ppl 9.18 | num_updates 300
+| saved checkpoint /ssd_scratch/cvit/asvs/checkpoints/checkpoint35.pt (epoch 35 @ 300 updates) (writing took 3.748875379562378 seconds)
+| epoch 036:    200 / 798 loss=2.759, nll_loss=2.759, ppl=6.77, wps=11546, ups=1, wpb=8173.816, bsz=262.567, num_updates=501, lr=0.0001, gnorm=1.374, clip=0.000, oom=0.000, wall=370, train_wall=149283
+| epoch 036:    400 / 798 loss=2.723, nll_loss=2.723, ppl=6.60, wps=11433, ups=1, wpb=8105.758, bsz=262.763, num_updates=701, lr=0.0001, gnorm=1.372, clip=0.000, oom=0.000, wall=512, train_wall=149382
+| epoch 036:    600 / 798 loss=2.695, nll_loss=2.695, ppl=6.48, wps=11415, ups=1, wpb=8144.839, bsz=264.732, num_updates=901, lr=0.0001, gnorm=1.367, clip=0.000, oom=0.000, wall=656, train_wall=149482
+| epoch 036 | loss 2.674 | nll_loss 2.674 | ppl 6.38 | wps 11405 | ups 1 | wpb 8147.125 | bsz 265.955 | num_updates 1098 | lr 0.0001 | gnorm 1.359 | clip 0.000 | oom 0.000 | wall 798 | train_wall 149581
+| epoch 036 | valid on 'valid' subset | loss 3.108 | nll_loss 3.108 | ppl 8.62 | num_updates 1098 | best_loss 3.10783
+| saved checkpoint /ssd_scratch/cvit/asvs/checkpoints/checkpoint36.pt (epoch 36 @ 1098 updates) (writing took 4.8789050579071045 seconds)
+| epoch 037:    200 / 798 loss=2.485, nll_loss=2.485, ppl=5.60, wps=11284, ups=1, wpb=8066.617, bsz=276.697, num_updates=1299, lr=0.0001, gnorm=1.337, clip=0.000, oom=0.000, wall=953, train_wall=149681
+| epoch 037:    400 / 798 loss=2.498, nll_loss=2.498, ppl=5.65, wps=11445, ups=1, wpb=8146.930, bsz=263.362, num_updates=1499, lr=0.0001, gnorm=1.330, clip=0.000, oom=0.000, wall=1094, train_wall=149781
+| epoch 037:    600 / 798 loss=2.494, nll_loss=2.494, ppl=5.63, wps=11419, ups=1, wpb=8144.481, bsz=264.200, num_updates=1699, lr=0.0001, gnorm=1.330, clip=0.000, oom=0.000, wall=1238, train_wall=149880
+| epoch 037 | loss 2.495 | nll_loss 2.495 | ppl 5.64 | wps 11403 | ups 1 | wpb 8147.125 | bsz 265.955 | num_updates 1896 | lr 0.0001 | gnorm 1.332 | clip 0.000 | oom 0.000 | wall 1379 | train_wall 149978
+| epoch 037 | valid on 'valid' subset | loss 3.085 | nll_loss 3.085 | ppl 8.48 | num_updates 1896 | best_loss 3.08491
+| saved checkpoint /ssd_scratch/cvit/asvs/checkpoints/checkpoint37.pt (epoch 37 @ 1896 updates) (writing took 5.027772426605225 seconds)
+| epoch 038:    200 / 798 loss=2.393, nll_loss=2.393, ppl=5.25, wps=11477, ups=1, wpb=8085.408, bsz=269.373, num_updates=2097, lr=0.0001, gnorm=1.330, clip=0.000, oom=0.000, wall=1532, train_wall=150078
+| epoch 038:    400 / 798 loss=2.389, nll_loss=2.389, ppl=5.24, wps=11410, ups=1, wpb=8081.529, bsz=267.312, num_updates=2297, lr=0.0001, gnorm=1.326, clip=0.000, oom=0.000, wall=1675, train_wall=150177
+| epoch 038:    600 / 798 loss=2.392, nll_loss=2.392, ppl=5.25, wps=11442, ups=1, wpb=8116.323, bsz=263.654, num_updates=2497, lr=0.0001, gnorm=1.326, clip=0.000, oom=0.000, wall=1817, train_wall=150277
+| epoch 038 | loss 2.387 | nll_loss 2.387 | ppl 5.23 | wps 11446 | ups 1 | wpb 8147.125 | bsz 265.955 | num_updates 2694 | lr 0.0001 | gnorm 1.324 | clip 0.000 | oom 0.000 | wall 1959 | train_wall 150375
+| epoch 038 | valid on 'valid' subset | loss 3.085 | nll_loss 3.085 | ppl 8.49 | num_updates 2694 | best_loss 3.08491
+| saved checkpoint /ssd_scratch/cvit/asvs/checkpoints/checkpoint38.pt (epoch 38 @ 2694 updates) (writing took 2.85809063911438 seconds)
+| epoch 039:    200 / 798 loss=2.286, nll_loss=2.286, ppl=4.88, wps=11566, ups=1, wpb=8282.378, bsz=272.637, num_updates=2895, lr=0.0001, gnorm=1.306, clip=0.000, oom=0.000, wall=2112, train_wall=150476
+| epoch 039:    400 / 798 loss=2.301, nll_loss=2.301, ppl=4.93, wps=11513, ups=1, wpb=8237.888, bsz=268.848, num_updates=3095, lr=0.0001, gnorm=1.312, clip=0.000, oom=0.000, wall=2255, train_wall=150576
+| epoch 039:    600 / 798 loss=2.308, nll_loss=2.308, ppl=4.95, wps=11503, ups=1, wpb=8192.033, bsz=265.517, num_updates=3295, lr=0.0001, gnorm=1.315, clip=0.000, oom=0.000, wall=2396, train_wall=150676
+| epoch 039 | loss 2.307 | nll_loss 2.307 | ppl 4.95 | wps 11468 | ups 1 | wpb 8147.125 | bsz 265.955 | num_updates 3492 | lr 0.0001 | gnorm 1.324 | clip 0.000 | oom 0.000 | wall 2535 | train_wall 150773
+| epoch 039 | valid on 'valid' subset | loss 3.087 | nll_loss 3.087 | ppl 8.50 | num_updates 3492 | best_loss 3.08491
+| saved checkpoint /ssd_scratch/cvit/asvs/checkpoints/checkpoint39.pt (epoch 39 @ 3492 updates) (writing took 2.8565165996551514 seconds)
+| epoch 040:    200 / 798 loss=2.225, nll_loss=2.225, ppl=4.67, wps=11515, ups=1, wpb=8110.393, bsz=258.269, num_updates=3693, lr=0.0001, gnorm=1.314, clip=0.000, oom=0.000, wall=2686, train_wall=150873
+| epoch 040:    400 / 798 loss=2.240, nll_loss=2.240, ppl=4.72, wps=11456, ups=1, wpb=8085.122, bsz=258.254, num_updates=3893, lr=0.0001, gnorm=1.330, clip=0.000, oom=0.000, wall=2827, train_wall=150972
+| epoch 040:    600 / 798 loss=2.240, nll_loss=2.240, ppl=4.72, wps=11475, ups=1, wpb=8140.948, bsz=262.576, num_updates=4093, lr=0.0001, gnorm=1.326, clip=0.000, oom=0.000, wall=2971, train_wall=151073
+| epoch 040 | loss 2.244 | nll_loss 2.244 | ppl 4.74 | wps 11481 | ups 1 | wpb 8147.125 | bsz 265.955 | num_updates 4290 | lr 0.0001 | gnorm 1.325 | clip 0.000 | oom 0.000 | wall 3110 | train_wall 151171
+| epoch 040 | valid on 'valid' subset | loss 3.089 | nll_loss 3.089 | ppl 8.51 | num_updates 4290 | best_loss 3.08491
+| saved checkpoint /ssd_scratch/cvit/asvs/checkpoints/checkpoint40.pt (epoch 40 @ 4290 updates) (writing took 2.8725922107696533 seconds)
+| epoch 041:    200 / 798 loss=2.162, nll_loss=2.162, ppl=4.47, wps=11518, ups=1, wpb=8181.478, bsz=259.662, num_updates=4491, lr=0.0001, gnorm=1.310, clip=0.000, oom=0.000, wall=3262, train_wall=151271
+| epoch 041:    400 / 798 loss=2.174, nll_loss=2.174, ppl=4.51, wps=11521, ups=1, wpb=8190.566, bsz=266.853, num_updates=4691, lr=0.0001, gnorm=1.312, clip=0.000, oom=0.000, wall=3405, train_wall=151370
+| epoch 041:    600 / 798 loss=2.183, nll_loss=2.183, ppl=4.54, wps=11516, ups=1, wpb=8204.847, bsz=269.072, num_updates=4891, lr=0.0001, gnorm=1.318, clip=0.000, oom=0.000, wall=3548, train_wall=151471
+| epoch 041 | loss 2.189 | nll_loss 2.189 | ppl 4.56 | wps 11492 | ups 1 | wpb 8147.125 | bsz 265.955 | num_updates 5088 | lr 0.0001 | gnorm 1.323 | clip 0.000 | oom 0.000 | wall 3685 | train_wall 151568
+| epoch 041 | valid on 'valid' subset | loss 3.104 | nll_loss 3.104 | ppl 8.60 | num_updates 5088 | best_loss 3.08491
+| saved checkpoint /ssd_scratch/cvit/asvs/checkpoints/checkpoint41.pt (epoch 41 @ 5088 updates) (writing took 2.846903085708618 seconds)
+| epoch 042:    200 / 798 loss=2.117, nll_loss=2.117, ppl=4.34, wps=11395, ups=1, wpb=8102.244, bsz=262.527, num_updates=5289, lr=0.0001, gnorm=1.327, clip=0.000, oom=0.000, wall=3838, train_wall=151668
+| epoch 042:    400 / 798 loss=2.126, nll_loss=2.126, ppl=4.36, wps=11390, ups=1, wpb=8143.621, bsz=266.294, num_updates=5489, lr=0.0001, gnorm=1.328, clip=0.000, oom=0.000, wall=3981, train_wall=151768
+| epoch 042:    600 / 798 loss=2.135, nll_loss=2.135, ppl=4.39, wps=11399, ups=1, wpb=8149.220, bsz=266.183, num_updates=5689, lr=0.0001, gnorm=1.324, clip=0.000, oom=0.000, wall=4124, train_wall=151868
+| epoch 042 | loss 2.143 | nll_loss 2.143 | ppl 4.42 | wps 11402 | ups 1 | wpb 8147.125 | bsz 265.955 | num_updates 5886 | lr 0.0001 | gnorm 1.326 | clip 0.000 | oom 0.000 | wall 4265 | train_wall 151966
+| epoch 042 | valid on 'valid' subset | loss 3.115 | nll_loss 3.115 | ppl 8.66 | num_updates 5886 | best_loss 3.08491
+| saved checkpoint /ssd_scratch/cvit/asvs/checkpoints/checkpoint42.pt (epoch 42 @ 5886 updates) (writing took 2.8488221168518066 seconds)
+| epoch 043:    200 / 798 loss=2.069, nll_loss=2.069, ppl=4.20, wps=11540, ups=1, wpb=8231.915, bsz=267.502, num_updates=6087, lr=0.0001, gnorm=1.301, clip=0.000, oom=0.000, wall=4418, train_wall=152067
+| epoch 043:    400 / 798 loss=2.083, nll_loss=2.083, ppl=4.24, wps=11453, ups=1, wpb=8123.973, bsz=262.623, num_updates=6287, lr=0.0001, gnorm=1.318, clip=0.000, oom=0.000, wall=4559, train_wall=152166
+| epoch 043:    600 / 798 loss=2.089, nll_loss=2.089, ppl=4.25, wps=11434, ups=1, wpb=8126.230, bsz=269.218, num_updates=6487, lr=0.0001, gnorm=1.322, clip=0.000, oom=0.000, wall=4701, train_wall=152266
+| epoch 043 | loss 2.099 | nll_loss 2.099 | ppl 4.28 | wps 11485 | ups 1 | wpb 8147.125 | bsz 265.955 | num_updates 6684 | lr 0.0001 | gnorm 1.320 | clip 0.000 | oom 0.000 | wall 4840 | train_wall 152363
+| epoch 043 | valid on 'valid' subset | loss 3.125 | nll_loss 3.125 | ppl 8.72 | num_updates 6684 | best_loss 3.08491
+| saved checkpoint /ssd_scratch/cvit/asvs/checkpoints/checkpoint43.pt (epoch 43 @ 6684 updates) (writing took 2.8580193519592285 seconds)
+| epoch 044:    200 / 798 loss=2.030, nll_loss=2.030, ppl=4.09, wps=11433, ups=1, wpb=8085.771, bsz=272.000, num_updates=6885, lr=0.0001, gnorm=1.318, clip=0.000, oom=0.000, wall=4992, train_wall=152463
+| epoch 044:    400 / 798 loss=2.042, nll_loss=2.042, ppl=4.12, wps=11471, ups=1, wpb=8148.227, bsz=272.219, num_updates=7085, lr=0.0001, gnorm=1.316, clip=0.000, oom=0.000, wall=5134, train_wall=152562
+| epoch 044:    600 / 798 loss=2.046, nll_loss=2.046, ppl=4.13, wps=11454, ups=1, wpb=8186.978, bsz=274.942, num_updates=7285, lr=0.0001, gnorm=1.312, clip=0.000, oom=0.000, wall=5279, train_wall=152663
+| epoch 044 | loss 2.059 | nll_loss 2.059 | ppl 4.17 | wps 11458 | ups 1 | wpb 8147.125 | bsz 265.955 | num_updates 7482 | lr 0.0001 | gnorm 1.320 | clip 0.000 | oom 0.000 | wall 5417 | train_wall 152761
+| epoch 044 | valid on 'valid' subset | loss 3.113 | nll_loss 3.113 | ppl 8.65 | num_updates 7482 | best_loss 3.08491
+| saved checkpoint /ssd_scratch/cvit/asvs/checkpoints/checkpoint44.pt (epoch 44 @ 7482 updates) (writing took 2.8629682064056396 seconds)
+| epoch 045:    200 / 798 loss=2.023, nll_loss=2.023, ppl=4.06, wps=11392, ups=1, wpb=7975.846, bsz=252.577, num_updates=7683, lr=0.0001, gnorm=1.337, clip=0.000, oom=0.000, wall=5567, train_wall=152860
+| epoch 045:    400 / 798 loss=2.010, nll_loss=2.010, ppl=4.03, wps=11474, ups=1, wpb=8182.436, bsz=266.554, num_updates=7883, lr=0.0001, gnorm=1.312, clip=0.000, oom=0.000, wall=5712, train_wall=152962
+| epoch 045:    600 / 798 loss=2.018, nll_loss=2.018, ppl=4.05, wps=11448, ups=1, wpb=8162.775, bsz=264.626, num_updates=8083, lr=0.0001, gnorm=1.319, clip=0.000, oom=0.000, wall=5855, train_wall=153061
+| epoch 045 | loss 2.023 | nll_loss 2.023 | ppl 4.07 | wps 11412 | ups 1 | wpb 8147.125 | bsz 265.955 | num_updates 8280 | lr 0.0001 | gnorm 1.321 | clip 0.000 | oom 0.000 | wall 5996 | train_wall 153159
+| epoch 045 | valid on 'valid' subset | loss 3.130 | nll_loss 3.130 | ppl 8.75 | num_updates 8280 | best_loss 3.08491
+| saved checkpoint /ssd_scratch/cvit/asvs/checkpoints/checkpoint45.pt (epoch 45 @ 8280 updates) (writing took 3.007852792739868 seconds)
+| epoch 046:    200 / 798 loss=1.979, nll_loss=1.979, ppl=3.94, wps=11328, ups=1, wpb=7933.826, bsz=268.617, num_updates=8481, lr=0.0001, gnorm=1.343, clip=0.000, oom=0.000, wall=6147, train_wall=153258
+| epoch 046:    400 / 798 loss=1.981, nll_loss=1.981, ppl=3.95, wps=11410, ups=1, wpb=8073.973, bsz=269.067, num_updates=8681, lr=0.0001, gnorm=1.326, clip=0.000, oom=0.000, wall=6289, train_wall=153358
+| epoch 046:    600 / 798 loss=1.990, nll_loss=1.990, ppl=3.97, wps=11451, ups=1, wpb=8097.880, bsz=263.135, num_updates=8881, lr=0.0001, gnorm=1.326, clip=0.000, oom=0.000, wall=6431, train_wall=153458
+| epoch 046 | loss 1.992 | nll_loss 1.992 | ppl 3.98 | wps 11483 | ups 1 | wpb 8147.125 | bsz 265.955 | num_updates 9078 | lr 0.0001 | gnorm 1.322 | clip 0.000 | oom 0.000 | wall 6572 | train_wall 153556
+| epoch 046 | valid on 'valid' subset | loss 3.151 | nll_loss 3.151 | ppl 8.88 | num_updates 9078 | best_loss 3.08491
+| saved checkpoint /ssd_scratch/cvit/asvs/checkpoints/checkpoint46.pt (epoch 46 @ 9078 updates) (writing took 2.9988579750061035 seconds)
+| epoch 047:    200 / 798 loss=1.950, nll_loss=1.950, ppl=3.86, wps=11544, ups=1, wpb=8132.328, bsz=249.990, num_updates=9279, lr=0.0001, gnorm=1.317, clip=0.000, oom=0.000, wall=6723, train_wall=153656
+| epoch 047:    400 / 798 loss=1.950, nll_loss=1.950, ppl=3.86, wps=11485, ups=1, wpb=8176.382, bsz=261.805, num_updates=9479, lr=0.0001, gnorm=1.318, clip=0.000, oom=0.000, wall=6867, train_wall=153756
+| epoch 047:    600 / 798 loss=1.961, nll_loss=1.961, ppl=3.89, wps=11426, ups=1, wpb=8142.196, bsz=262.190, num_updates=9679, lr=0.0001, gnorm=1.327, clip=0.000, oom=0.000, wall=7010, train_wall=153856
+| epoch 047 | loss 1.961 | nll_loss 1.961 | ppl 3.89 | wps 11416 | ups 1 | wpb 8147.125 | bsz 265.955 | num_updates 9876 | lr 0.0001 | gnorm 1.325 | clip 0.000 | oom 0.000 | wall 7151 | train_wall 153954
+| epoch 047 | valid on 'valid' subset | loss 3.159 | nll_loss 3.159 | ppl 8.93 | num_updates 9876 | best_loss 3.08491
+| saved checkpoint /ssd_scratch/cvit/asvs/checkpoints/checkpoint47.pt (epoch 47 @ 9876 updates) (writing took 2.85624098777771 seconds)
+| epoch 048:    200 / 798 loss=1.889, nll_loss=1.889, ppl=3.70, wps=11452, ups=1, wpb=8197.294, bsz=268.856, num_updates=10077, lr=0.0001, gnorm=1.315, clip=0.000, oom=0.000, wall=7304, train_wall=154055
+| epoch 048:    400 / 798 loss=1.919, nll_loss=1.919, ppl=3.78, wps=11437, ups=1, wpb=8102.850, bsz=259.132, num_updates=10277, lr=0.0001, gnorm=1.325, clip=0.000, oom=0.000, wall=7445, train_wall=154154
+| epoch 048:    600 / 798 loss=1.923, nll_loss=1.923, ppl=3.79, wps=11427, ups=1, wpb=8142.752, bsz=266.809, num_updates=10477, lr=0.0001, gnorm=1.324, clip=0.000, oom=0.000, wall=7589, train_wall=154255
+| epoch 048 | loss 1.932 | nll_loss 1.932 | ppl 3.82 | wps 11436 | ups 1 | wpb 8140.593 | bsz 264.391 | num_updates 10674 | lr 0.0001 | gnorm 1.326 | clip 0.000 | oom 0.000 | wall 7728 | train_wall 154352
+| epoch 048 | valid on 'valid' subset | loss 3.183 | nll_loss 3.183 | ppl 9.08 | num_updates 10674 | best_loss 3.08491
+| saved checkpoint /ssd_scratch/cvit/asvs/checkpoints/checkpoint48.pt (epoch 48 @ 10674 updates) (writing took 2.909393548965454 seconds)
+| epoch 049:    200 / 798 loss=1.879, nll_loss=1.879, ppl=3.68, wps=11401, ups=1, wpb=8153.930, bsz=269.731, num_updates=10875, lr=0.0001, gnorm=1.342, clip=0.000, oom=0.000, wall=7882, train_wall=154452
+| epoch 049:    400 / 798 loss=1.886, nll_loss=1.886, ppl=3.70, wps=11383, ups=1, wpb=8128.960, bsz=269.367, num_updates=11075, lr=0.0001, gnorm=1.341, clip=0.000, oom=0.000, wall=8024, train_wall=154552
+| epoch 049:    600 / 798 loss=1.895, nll_loss=1.895, ppl=3.72, wps=11405, ups=1, wpb=8144.845, bsz=267.448, num_updates=11275, lr=0.0001, gnorm=1.337, clip=0.000, oom=0.000, wall=8167, train_wall=154651
+| epoch 049 | loss 1.904 | nll_loss 1.904 | ppl 3.74 | wps 11385 | ups 1 | wpb 8147.125 | bsz 265.955 | num_updates 11472 | lr 0.0001 | gnorm 1.334 | clip 0.000 | oom 0.000 | wall 8309 | train_wall 154749
+| epoch 049 | valid on 'valid' subset | loss 3.181 | nll_loss 3.181 | ppl 9.07 | num_updates 11472 | best_loss 3.08491
+| saved checkpoint /ssd_scratch/cvit/asvs/checkpoints/checkpoint49.pt (epoch 49 @ 11472 updates) (writing took 2.853463649749756 seconds)
+| epoch 050:    200 / 798 loss=1.855, nll_loss=1.855, ppl=3.62, wps=11409, ups=1, wpb=8135.876, bsz=260.975, num_updates=11673, lr=0.0001, gnorm=1.316, clip=0.000, oom=0.000, wall=8462, train_wall=154849
+| epoch 050:    400 / 798 loss=1.857, nll_loss=1.857, ppl=3.62, wps=11391, ups=1, wpb=8141.544, bsz=264.938, num_updates=11873, lr=0.0001, gnorm=1.322, clip=0.000, oom=0.000, wall=8605, train_wall=154949
+| epoch 050:    600 / 798 loss=1.869, nll_loss=1.869, ppl=3.65, wps=11397, ups=1, wpb=8147.749, bsz=266.529, num_updates=12073, lr=0.0001, gnorm=1.324, clip=0.000, oom=0.000, wall=8748, train_wall=155049
+| epoch 050 | loss 1.878 | nll_loss 1.878 | ppl 3.67 | wps 11371 | ups 1 | wpb 8147.125 | bsz 265.955 | num_updates 12270 | lr 0.0001 | gnorm 1.330 | clip 0.000 | oom 0.000 | wall 8890 | train_wall 155148
+| epoch 050 | valid on 'valid' subset | loss 3.203 | nll_loss 3.203 | ppl 9.21 | num_updates 12270 | best_loss 3.08491
+| saved checkpoint /ssd_scratch/cvit/asvs/checkpoints/checkpoint50.pt (epoch 50 @ 12270 updates) (writing took 2.8575479984283447 seconds)
+| epoch 051:    200 / 798 loss=1.802, nll_loss=1.802, ppl=3.49, wps=11376, ups=1, wpb=8180.701, bsz=284.617, num_updates=12471, lr=0.0001, gnorm=1.309, clip=0.000, oom=0.000, wall=9044, train_wall=155248
+| epoch 051:    400 / 798 loss=1.830, nll_loss=1.830, ppl=3.55, wps=11384, ups=1, wpb=8109.713, bsz=272.200, num_updates=12671, lr=0.0001, gnorm=1.333, clip=0.000, oom=0.000, wall=9185, train_wall=155348
+| epoch 051:    600 / 798 loss=1.846, nll_loss=1.846, ppl=3.59, wps=11426, ups=1, wpb=8133.512, bsz=267.168, num_updates=12871, lr=0.0001, gnorm=1.334, clip=0.000, oom=0.000, wall=9327, train_wall=155447
+| epoch 051 | loss 1.853 | nll_loss 1.853 | ppl 3.61 | wps 11464 | ups 1 | wpb 8147.125 | bsz 265.955 | num_updates 13068 | lr 0.0001 | gnorm 1.331 | clip 0.000 | oom 0.000 | wall 9467 | train_wall 155545
+| epoch 051 | valid on 'valid' subset | loss 3.202 | nll_loss 3.202 | ppl 9.20 | num_updates 13068 | best_loss 3.08491
+| saved checkpoint /ssd_scratch/cvit/asvs/checkpoints/checkpoint51.pt (epoch 51 @ 13068 updates) (writing took 2.8721601963043213 seconds)
+| epoch 052:    200 / 798 loss=1.799, nll_loss=1.799, ppl=3.48, wps=11573, ups=1, wpb=8214.746, bsz=263.443, num_updates=13269, lr=0.0001, gnorm=1.305, clip=0.000, oom=0.000, wall=9619, train_wall=155645
+| epoch 052:    400 / 798 loss=1.821, nll_loss=1.821, ppl=3.53, wps=11504, ups=1, wpb=8079.935, bsz=252.110, num_updates=13469, lr=0.0001, gnorm=1.337, clip=0.000, oom=0.000, wall=9758, train_wall=155743
+| epoch 052:    600 / 798 loss=1.827, nll_loss=1.827, ppl=3.55, wps=11495, ups=1, wpb=8108.694, bsz=259.834, num_updates=13669, lr=0.0001, gnorm=1.335, clip=0.000, oom=0.000, wall=9900, train_wall=155843
+| epoch 052 | loss 1.829 | nll_loss 1.829 | ppl 3.55 | wps 11497 | ups 1 | wpb 8147.125 | bsz 265.955 | num_updates 13866 | lr 0.0001 | gnorm 1.332 | clip 0.000 | oom 0.000 | wall 10042 | train_wall 155942
+| epoch 052 | valid on 'valid' subset | loss 3.212 | nll_loss 3.212 | ppl 9.27 | num_updates 13866 | best_loss 3.08491
+| saved checkpoint /ssd_scratch/cvit/asvs/checkpoints/checkpoint52.pt (epoch 52 @ 13866 updates) (writing took 3.2253520488739014 seconds)
+| epoch 053:    200 / 798 loss=1.773, nll_loss=1.773, ppl=3.42, wps=11560, ups=1, wpb=8143.741, bsz=259.343, num_updates=14067, lr=0.0001, gnorm=1.310, clip=0.000, oom=0.000, wall=10193, train_wall=156041
+| epoch 053:    400 / 798 loss=1.786, nll_loss=1.786, ppl=3.45, wps=11521, ups=1, wpb=8139.057, bsz=260.549, num_updates=14267, lr=0.0001, gnorm=1.317, clip=0.000, oom=0.000, wall=10335, train_wall=156140
+| epoch 053:    600 / 798 loss=1.800, nll_loss=1.800, ppl=3.48, wps=11449, ups=1, wpb=8104.220, bsz=261.777, num_updates=14467, lr=0.0001, gnorm=1.329, clip=0.000, oom=0.000, wall=10477, train_wall=156240
+| epoch 053 | loss 1.806 | nll_loss 1.806 | ppl 3.50 | wps 11452 | ups 1 | wpb 8147.125 | bsz 265.955 | num_updates 14664 | lr 0.0001 | gnorm 1.325 | clip 0.000 | oom 0.000 | wall 10619 | train_wall 156339
+| epoch 053 | valid on 'valid' subset | loss 3.223 | nll_loss 3.223 | ppl 9.34 | num_updates 14664 | best_loss 3.08491
+| saved checkpoint /ssd_scratch/cvit/asvs/checkpoints/checkpoint53.pt (epoch 53 @ 14664 updates) (writing took 2.8486695289611816 seconds)
+| epoch 054:    200 / 798 loss=1.763, nll_loss=1.763, ppl=3.39, wps=11527, ups=1, wpb=8140.348, bsz=252.697, num_updates=14865, lr=0.0001, gnorm=1.329, clip=0.000, oom=0.000, wall=10770, train_wall=156439
+| epoch 054:    400 / 798 loss=1.778, nll_loss=1.778, ppl=3.43, wps=11546, ups=1, wpb=8174.082, bsz=258.653, num_updates=15065, lr=0.0001, gnorm=1.324, clip=0.000, oom=0.000, wall=10912, train_wall=156539
+| epoch 054:    600 / 798 loss=1.780, nll_loss=1.780, ppl=3.43, wps=11481, ups=1, wpb=8168.606, bsz=266.316, num_updates=15265, lr=0.0001, gnorm=1.324, clip=0.000, oom=0.000, wall=11056, train_wall=156639
+| epoch 054 | loss 1.785 | nll_loss 1.785 | ppl 3.45 | wps 11441 | ups 1 | wpb 8147.125 | bsz 265.955 | num_updates 15462 | lr 0.0001 | gnorm 1.330 | clip 0.000 | oom 0.000 | wall 11197 | train_wall 156737
+| epoch 054 | valid on 'valid' subset | loss 3.244 | nll_loss 3.244 | ppl 9.47 | num_updates 15462 | best_loss 3.08491
+| saved checkpoint /ssd_scratch/cvit/asvs/checkpoints/checkpoint54.pt (epoch 54 @ 15462 updates) (writing took 2.874335765838623 seconds)
+| epoch 055:    200 / 798 loss=1.718, nll_loss=1.718, ppl=3.29, wps=11542, ups=1, wpb=8339.498, bsz=284.219, num_updates=15663, lr=0.0001, gnorm=1.320, clip=0.000, oom=0.000, wall=11351, train_wall=156838
+| epoch 055:    400 / 798 loss=1.742, nll_loss=1.742, ppl=3.34, wps=11499, ups=1, wpb=8192.362, bsz=272.599, num_updates=15863, lr=0.0001, gnorm=1.330, clip=0.000, oom=0.000, wall=11492, train_wall=156937
+| epoch 055:    600 / 798 loss=1.754, nll_loss=1.754, ppl=3.37, wps=11514, ups=1, wpb=8178.368, bsz=265.797, num_updates=16063, lr=0.0001, gnorm=1.330, clip=0.000, oom=0.000, wall=11633, train_wall=157036
+| epoch 055 | loss 1.764 | nll_loss 1.764 | ppl 3.40 | wps 11466 | ups 1 | wpb 8147.125 | bsz 265.955 | num_updates 16260 | lr 0.0001 | gnorm 1.335 | clip 0.000 | oom 0.000 | wall 11773 | train_wall 157134
+| epoch 055 | valid on 'valid' subset | loss 3.245 | nll_loss 3.245 | ppl 9.48 | num_updates 16260 | best_loss 3.08491
+| saved checkpoint /ssd_scratch/cvit/asvs/checkpoints/checkpoint55.pt (epoch 55 @ 16260 updates) (writing took 2.863172769546509 seconds)
+| epoch 056:    200 / 798 loss=1.710, nll_loss=1.710, ppl=3.27, wps=11526, ups=1, wpb=8147.393, bsz=270.925, num_updates=16461, lr=0.0001, gnorm=1.322, clip=0.000, oom=0.000, wall=11925, train_wall=157233
+| epoch 056:    400 / 798 loss=1.720, nll_loss=1.720, ppl=3.29, wps=11451, ups=1, wpb=8153.077, bsz=277.387, num_updates=16661, lr=0.0001, gnorm=1.320, clip=0.000, oom=0.000, wall=12068, train_wall=157333
+| epoch 056:    600 / 798 loss=1.732, nll_loss=1.732, ppl=3.32, wps=11473, ups=1, wpb=8162.344, bsz=273.012, num_updates=16861, lr=0.0001, gnorm=1.325, clip=0.000, oom=0.000, wall=12210, train_wall=157433
+| epoch 056 | loss 1.745 | nll_loss 1.745 | ppl 3.35 | wps 11447 | ups 1 | wpb 8147.125 | bsz 265.955 | num_updates 17058 | lr 0.0001 | gnorm 1.332 | clip 0.000 | oom 0.000 | wall 12350 | train_wall 157531
+| epoch 056 | valid on 'valid' subset | loss 3.251 | nll_loss 3.251 | ppl 9.52 | num_updates 17058 | best_loss 3.08491
+| saved checkpoint /ssd_scratch/cvit/asvs/checkpoints/checkpoint56.pt (epoch 56 @ 17058 updates) (writing took 2.843870162963867 seconds)
+| epoch 057:    200 / 798 loss=1.705, nll_loss=1.705, ppl=3.26, wps=11579, ups=1, wpb=8215.134, bsz=264.358, num_updates=17259, lr=0.0001, gnorm=1.329, clip=0.000, oom=0.000, wall=12503, train_wall=157630
+| epoch 057:    400 / 798 loss=1.715, nll_loss=1.715, ppl=3.28, wps=11451, ups=1, wpb=8128.469, bsz=260.229, num_updates=17459, lr=0.0001, gnorm=1.344, clip=0.000, oom=0.000, wall=12645, train_wall=157729
+| epoch 057:    600 / 798 loss=1.719, nll_loss=1.719, ppl=3.29, wps=11440, ups=1, wpb=8135.018, bsz=263.095, num_updates=17659, lr=0.0001, gnorm=1.340, clip=0.000, oom=0.000, wall=12787, train_wall=157829
+| epoch 057 | loss 1.726 | nll_loss 1.726 | ppl 3.31 | wps 11421 | ups 1 | wpb 8147.125 | bsz 265.955 | num_updates 17856 | lr 0.0001 | gnorm 1.343 | clip 0.000 | oom 0.000 | wall 12929 | train_wall 157927
+| epoch 057 | valid on 'valid' subset | loss 3.273 | nll_loss 3.273 | ppl 9.67 | num_updates 17856 | best_loss 3.08491
+| saved checkpoint /ssd_scratch/cvit/asvs/checkpoints/checkpoint57.pt (epoch 57 @ 17856 updates) (writing took 2.8746042251586914 seconds)
+| epoch 058:    200 / 798 loss=1.700, nll_loss=1.700, ppl=3.25, wps=11507, ups=1, wpb=8187.876, bsz=267.303, num_updates=18057, lr=0.0001, gnorm=1.334, clip=0.000, oom=0.000, wall=13082, train_wall=158028
+| epoch 058:    400 / 798 loss=1.702, nll_loss=1.702, ppl=3.25, wps=11468, ups=1, wpb=8130.032, bsz=262.564, num_updates=18257, lr=0.0001, gnorm=1.335, clip=0.000, oom=0.000, wall=13223, train_wall=158127
+| epoch 058:    600 / 798 loss=1.704, nll_loss=1.704, ppl=3.26, wps=11485, ups=1, wpb=8124.028, bsz=262.469, num_updates=18457, lr=0.0001, gnorm=1.333, clip=0.000, oom=0.000, wall=13364, train_wall=158226
+| epoch 058 | loss 1.708 | nll_loss 1.708 | ppl 3.27 | wps 11495 | ups 1 | wpb 8147.125 | bsz 265.955 | num_updates 18654 | lr 0.0001 | gnorm 1.333 | clip 0.000 | oom 0.000 | wall 13504 | train_wall 158324
+| epoch 058 | valid on 'valid' subset | loss 3.286 | nll_loss 3.286 | ppl 9.75 | num_updates 18654 | best_loss 3.08491
+| saved checkpoint /ssd_scratch/cvit/asvs/checkpoints/checkpoint58.pt (epoch 58 @ 18654 updates) (writing took 2.850966453552246 seconds)
+| epoch 059:    200 / 798 loss=1.658, nll_loss=1.658, ppl=3.16, wps=11421, ups=1, wpb=8145.124, bsz=278.289, num_updates=18855, lr=0.0001, gnorm=1.319, clip=0.000, oom=0.000, wall=13657, train_wall=158425
+| epoch 059:    400 / 798 loss=1.673, nll_loss=1.673, ppl=3.19, wps=11455, ups=1, wpb=8137.873, bsz=268.050, num_updates=19055, lr=0.0001, gnorm=1.325, clip=0.000, oom=0.000, wall=13799, train_wall=158524
+| epoch 059:    600 / 798 loss=1.683, nll_loss=1.683, ppl=3.21, wps=11490, ups=1, wpb=8145.346, bsz=262.003, num_updates=19255, lr=0.0001, gnorm=1.335, clip=0.000, oom=0.000, wall=13940, train_wall=158623
+| epoch 059 | loss 1.690 | nll_loss 1.690 | ppl 3.23 | wps 11477 | ups 1 | wpb 8147.125 | bsz 265.955 | num_updates 19452 | lr 0.0001 | gnorm 1.336 | clip 0.000 | oom 0.000 | wall 14080 | train_wall 158722
+| epoch 059 | valid on 'valid' subset | loss 3.288 | nll_loss 3.288 | ppl 9.77 | num_updates 19452 | best_loss 3.08491
+| saved checkpoint /ssd_scratch/cvit/asvs/checkpoints/checkpoint59.pt (epoch 59 @ 19452 updates) (writing took 2.8675389289855957 seconds)
+| epoch 060:    200 / 798 loss=1.656, nll_loss=1.656, ppl=3.15, wps=11485, ups=1, wpb=8151.861, bsz=271.721, num_updates=19653, lr=0.0001, gnorm=1.330, clip=0.000, oom=0.000, wall=14232, train_wall=158822
+| epoch 060:    400 / 798 loss=1.657, nll_loss=1.657, ppl=3.15, wps=11459, ups=1, wpb=8138.803, bsz=271.421, num_updates=19853, lr=0.0001, gnorm=1.330, clip=0.000, oom=0.000, wall=14374, train_wall=158921
+| epoch 060:    600 / 798 loss=1.667, nll_loss=1.667, ppl=3.18, wps=11484, ups=1, wpb=8145.414, bsz=265.704, num_updates=20053, lr=0.0001, gnorm=1.334, clip=0.000, oom=0.000, wall=14516, train_wall=159021
+| epoch 060 | loss 1.672 | nll_loss 1.672 | ppl 3.19 | wps 11480 | ups 1 | wpb 8147.125 | bsz 265.955 | num_updates 20250 | lr 0.0001 | gnorm 1.337 | clip 0.000 | oom 0.000 | wall 14656 | train_wall 159119
+| epoch 060 | valid on 'valid' subset | loss 3.297 | nll_loss 3.297 | ppl 9.83 | num_updates 20250 | best_loss 3.08491
+/home2/asvs/fairseq-working/fairseq/tasks/cvit_translation.py:149: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  data = yaml.load(contents)
+| WARNING: ran out of memory with exception: CUDA out of memory. Tried to allocate 974.00 MiB (GPU 0; 10.76 GiB total capacity; 8.04 GiB already allocated; 329.12 MiB free; 1.54 GiB cached);
+ Skipping batch
+| saved checkpoint /ssd_scratch/cvit/asvs/checkpoints/checkpoint60.pt (epoch 60 @ 20250 updates) (writing took 2.8741555213928223 seconds)
+| done training in 14662.3 seconds
+sending incremental file list
+checkpoint_best.pt
+checkpoint_last.pt
+
+sent 1,370,754,447 bytes  received 54 bytes  16,615,206.07 bytes/sec
+total size is 1,562,047,020  speedup is 1.14

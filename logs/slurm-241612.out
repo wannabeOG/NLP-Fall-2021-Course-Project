@@ -1,0 +1,298 @@
+==========================================
+SLURM_JOB_ID = 241612
+SLURM_NODELIST = gnode53
+SLURM_JOB_GPUS = 1
+==========================================
+sending incremental file list
+checkpoint_last.pt
+
+sent 685,925,614 bytes  received 35 bytes  21,105,404.58 bytes/sec
+total size is 781,023,590  speedup is 1.14
+sending incremental file list
+dev.mr-en.en
+dev.mr-en.mr
+test.mr-en.en
+test.mr-en.mr
+train.mr-en.en
+train.mr-en.mr
+
+sent 9,910,065 bytes  received 130 bytes  2,831,484.29 bytes/sec
+total size is 37,591,885  speedup is 3.79
+preprocess_cvit.py:14: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  data = yaml.load(contents)
+LMDB(/ssd_scratch/cvit/asvs/data/pib-en-mar/dev.mr-en.mr) does not exist. Building
+Loaded /ssd_scratch/cvit/asvs/data/pib-en-mar/dev.mr-en.mr
+Built LMDB(/ssd_scratch/cvit/asvs/data/pib-en-mar/dev.mr-en.mr)
+LMDB(/ssd_scratch/cvit/asvs/data/pib-en-mar/test.mr-en.mr) does not exist. Building
+Loaded /ssd_scratch/cvit/asvs/data/pib-en-mar/test.mr-en.mr
+Built LMDB(/ssd_scratch/cvit/asvs/data/pib-en-mar/test.mr-en.mr)
+LMDB(/ssd_scratch/cvit/asvs/data/pib-en-mar/test.mr-en.en) does not exist. Building
+Loaded /ssd_scratch/cvit/asvs/data/pib-en-mar/test.mr-en.en
+Built LMDB(/ssd_scratch/cvit/asvs/data/pib-en-mar/test.mr-en.en)
+LMDB(/ssd_scratch/cvit/asvs/data/pib-en-mar/dev.mr-en.en) does not exist. Building
+Loaded /ssd_scratch/cvit/asvs/data/pib-en-mar/dev.mr-en.en
+Built LMDB(/ssd_scratch/cvit/asvs/data/pib-en-mar/dev.mr-en.en)
+LMDB(/ssd_scratch/cvit/asvs/data/pib-en-mar/train.mr-en.en) does not exist. Building
+Loaded /ssd_scratch/cvit/asvs/data/pib-en-mar/train.mr-en.en
+Built LMDB(/ssd_scratch/cvit/asvs/data/pib-en-mar/train.mr-en.en)
+LMDB(/ssd_scratch/cvit/asvs/data/pib-en-mar/train.mr-en.mr) does not exist. Building
+Loaded /ssd_scratch/cvit/asvs/data/pib-en-mar/train.mr-en.mr
+Built LMDB(/ssd_scratch/cvit/asvs/data/pib-en-mar/train.mr-en.mr)
+Namespace(activation_dropout=0.1, activation_fn='relu', adam_betas='(0.9, 0.999)', adam_eps=1e-08, adaptive_input=False, adaptive_softmax_cutoff=None, adaptive_softmax_dropout=0, arch='transformer', attention_dropout=0.1, best_checkpoint_metric='loss', bpe=None, bucket_cap_mb=25, clip_norm=25, cpu=False, criterion='label_smoothed_cross_entropy', curriculum=0, data='config.yaml', dataset_impl=None, ddp_backend='no_c10d', decoder_attention_heads=8, decoder_embed_dim=512, decoder_embed_path=None, decoder_ffn_embed_dim=2048, decoder_input_dim=512, decoder_layers=6, decoder_learned_pos=False, decoder_normalize_before=False, decoder_output_dim=512, device_id=0, disable_validation=False, distributed_backend='nccl', distributed_init_method=None, distributed_no_spawn=False, distributed_port=-1, distributed_rank=0, distributed_world_size=1, dropout=0.1, encoder_attention_heads=8, encoder_embed_dim=512, encoder_embed_path=None, encoder_ffn_embed_dim=2048, encoder_layers=6, encoder_learned_pos=False, encoder_normalize_before=False, find_unused_parameters=False, fix_batches_to_gpus=False, force_anneal=None, fp16=False, fp16_init_scale=128, fp16_scale_tolerance=0.0, fp16_scale_window=None, keep_interval_updates=-1, keep_last_epochs=-1, label_smoothing=0.0, lazy_load=False, left_pad_source='True', left_pad_target='False', log_format='simple', log_interval=200, lr=[0.0001], lr_scheduler='fixed', lr_shrink=0.1, max_epoch=90, max_sentences=None, max_sentences_valid=None, max_source_positions=1024, max_target_positions=1024, max_tokens=5000, max_tokens_valid=5000, max_update=0, maximize_best_checkpoint_metric=False, memory_efficient_fp16=False, min_loss_scale=0.0001, min_lr=1e-09, no_epoch_checkpoints=False, no_last_checkpoints=False, no_progress_bar=False, no_save=False, no_save_optimizer_state=False, no_token_positional_embeddings=False, num_workers=0, optimizer='adam', optimizer_overrides='{}', raw_text=False, required_batch_size_multiple=8, reset_dataloader=False, reset_lr_scheduler=False, reset_meters=False, reset_optimizer=True, restore_file='checkpoint_last.pt', save_dir='/ssd_scratch/cvit/asvs/checkpoints', save_interval=1, save_interval_updates=0, seed=1, sentence_avg=False, share_all_embeddings=True, share_decoder_input_output_embed=False, skip_invalid_size_inputs_valid_test=False, source_lang=None, target_lang=None, task='shared-multilingual-translation', tbmf_wrapper=False, tensorboard_logdir='', threshold_loss_scale=None, tokenizer=None, train_subset='train', update_freq=[2], upsample_primary=1, use_bmuf=False, user_dir=None, valid_subset='valid', validate_interval=1, warmup_updates=0, weight_decay=0.0)
+| [None] dictionary: 40897 types
+| [None] dictionary: 40897 types
+Initialized LMDB: /ssd_scratch/cvit/asvs/data/pib-en-mar/dev.mr-en.en
+Initialized LMDB: /ssd_scratch/cvit/asvs/data/pib-en-mar/dev.mr-en.mr
+TransformerModel(
+  (encoder): TransformerEncoder(
+    (embed_tokens): Embedding(40897, 512, padding_idx=1)
+    (embed_positions): SinusoidalPositionalEmbedding()
+    (layers): ModuleList(
+      (0): TransformerEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (self_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+      )
+      (1): TransformerEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (self_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+      )
+      (2): TransformerEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (self_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+      )
+      (3): TransformerEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (self_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+      )
+      (4): TransformerEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (self_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+      )
+      (5): TransformerEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (self_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+      )
+    )
+  )
+  (decoder): TransformerDecoder(
+    (embed_tokens): Embedding(40897, 512, padding_idx=1)
+    (embed_positions): SinusoidalPositionalEmbedding()
+    (layers): ModuleList(
+      (0): TransformerDecoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (self_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (encoder_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (encoder_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+      )
+      (1): TransformerDecoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (self_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (encoder_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (encoder_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+      )
+      (2): TransformerDecoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (self_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (encoder_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (encoder_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+      )
+      (3): TransformerDecoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (self_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (encoder_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (encoder_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+      )
+      (4): TransformerDecoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (self_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (encoder_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (encoder_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+      )
+      (5): TransformerDecoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (self_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (encoder_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (encoder_attn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm(torch.Size([512]), eps=1e-05, elementwise_affine=True)
+      )
+    )
+  )
+)
+| model transformer, criterion LabelSmoothedCrossEntropyCriterion
+| num. model params: 65077760 (num. trained: 65077760)
+| training on 1 GPUs
+| max tokens per GPU = 5000 and max sentences per GPU = None
+| loaded checkpoint /ssd_scratch/cvit/asvs/checkpoints/checkpoint_last.pt (epoch 85 @ 0 updates)
+| NOTICE: your device may support faster training with --fp16
+| loading train data for epoch 85
+Initialized LMDB: /ssd_scratch/cvit/asvs/data/pib-en-mar/train.mr-en.en
+Initialized LMDB: /ssd_scratch/cvit/asvs/data/pib-en-mar/train.mr-en.mr
+| epoch 085 | loss 1.518 | nll_loss 1.518 | ppl 2.86 | wps 6277 | ups 1 | wpb 7020.000 | bsz 228.000 | num_updates 2 | lr 0.0001 | gnorm 1.531 | clip 0.000 | oom 0.000 | wall 2 | train_wall 175384
+| epoch 085 | valid on 'valid' subset | loss 3.553 | nll_loss 3.553 | ppl 11.74 | num_updates 2
+| saved checkpoint /ssd_scratch/cvit/asvs/checkpoints/checkpoint85.pt (epoch 85 @ 2 updates) (writing took 3.4766101837158203 seconds)
+| epoch 086:    200 / 338 loss=1.522, nll_loss=1.522, ppl=2.87, wps=12102, ups=1, wpb=8309.159, bsz=236.856, num_updates=203, lr=0.0001, gnorm=1.275, clip=0.000, oom=0.000, wall=152, train_wall=175486
+| epoch 086 | loss 1.522 | nll_loss 1.522 | ppl 2.87 | wps 12092 | ups 1 | wpb 8394.781 | bsz 238.935 | num_updates 340 | lr 0.0001 | gnorm 1.258 | clip 0.000 | oom 0.000 | wall 249 | train_wall 175558
+| epoch 086 | valid on 'valid' subset | loss 3.494 | nll_loss 3.494 | ppl 11.26 | num_updates 340 | best_loss 3.49363
+| saved checkpoint /ssd_scratch/cvit/asvs/checkpoints/checkpoint86.pt (epoch 86 @ 340 updates) (writing took 4.757477760314941 seconds)
+| epoch 087:    200 / 338 loss=1.467, nll_loss=1.467, ppl=2.76, wps=12068, ups=1, wpb=8435.119, bsz=240.517, num_updates=541, lr=0.0001, gnorm=1.231, clip=0.000, oom=0.000, wall=403, train_wall=175662
+| epoch 087 | loss 1.475 | nll_loss 1.475 | ppl 2.78 | wps 12035 | ups 1 | wpb 8394.781 | bsz 238.935 | num_updates 678 | lr 0.0001 | gnorm 1.235 | clip 0.000 | oom 0.000 | wall 498 | train_wall 175733
+| epoch 087 | valid on 'valid' subset | loss 3.502 | nll_loss 3.502 | ppl 11.33 | num_updates 678 | best_loss 3.49363
+| saved checkpoint /ssd_scratch/cvit/asvs/checkpoints/checkpoint87.pt (epoch 87 @ 678 updates) (writing took 2.7768518924713135 seconds)
+| epoch 088:    200 / 338 loss=1.429, nll_loss=1.429, ppl=2.69, wps=12003, ups=1, wpb=8407.159, bsz=244.697, num_updates=879, lr=0.0001, gnorm=1.224, clip=0.000, oom=0.000, wall=651, train_wall=175838
+| epoch 088 | loss 1.444 | nll_loss 1.444 | ppl 2.72 | wps 12038 | ups 1 | wpb 8394.781 | bsz 238.935 | num_updates 1016 | lr 0.0001 | gnorm 1.232 | clip 0.000 | oom 0.000 | wall 746 | train_wall 175909
+| epoch 088 | valid on 'valid' subset | loss 3.504 | nll_loss 3.504 | ppl 11.35 | num_updates 1016 | best_loss 3.49363
+| saved checkpoint /ssd_scratch/cvit/asvs/checkpoints/checkpoint88.pt (epoch 88 @ 1016 updates) (writing took 2.763921022415161 seconds)
+| epoch 089:    200 / 338 loss=1.401, nll_loss=1.401, ppl=2.64, wps=12008, ups=1, wpb=8291.095, bsz=231.761, num_updates=1217, lr=0.0001, gnorm=1.232, clip=0.000, oom=0.000, wall=897, train_wall=176012
+| epoch 089 | loss 1.416 | nll_loss 1.416 | ppl 2.67 | wps 12016 | ups 1 | wpb 8394.781 | bsz 238.935 | num_updates 1354 | lr 0.0001 | gnorm 1.223 | clip 0.000 | oom 0.000 | wall 994 | train_wall 176085
+| epoch 089 | valid on 'valid' subset | loss 3.523 | nll_loss 3.523 | ppl 11.49 | num_updates 1354 | best_loss 3.49363
+| saved checkpoint /ssd_scratch/cvit/asvs/checkpoints/checkpoint89.pt (epoch 89 @ 1354 updates) (writing took 2.838632822036743 seconds)
+| epoch 090:    200 / 338 loss=1.382, nll_loss=1.382, ppl=2.61, wps=12014, ups=1, wpb=8395.338, bsz=237.771, num_updates=1555, lr=0.0001, gnorm=1.230, clip=0.000, oom=0.000, wall=1146, train_wall=176189
+| epoch 090 | loss 1.393 | nll_loss 1.393 | ppl 2.63 | wps 12016 | ups 1 | wpb 8394.781 | bsz 238.935 | num_updates 1692 | lr 0.0001 | gnorm 1.231 | clip 0.000 | oom 0.000 | wall 1242 | train_wall 176260
+| epoch 090 | valid on 'valid' subset | loss 3.555 | nll_loss 3.555 | ppl 11.75 | num_updates 1692 | best_loss 3.49363
+/home2/asvs/fairseq-working/fairseq/tasks/cvit_translation.py:149: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  data = yaml.load(contents)
+| saved checkpoint /ssd_scratch/cvit/asvs/checkpoints/checkpoint90.pt (epoch 90 @ 1692 updates) (writing took 2.7534682750701904 seconds)
+| done training in 1252.6 seconds
+
+
+EVALUATING ON CKPT_BEST
+------------------------------------
+/home2/asvs/fairseq-working/fairseq/tasks/cvit_translation.py:149: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  data = yaml.load(contents)
+/home2/asvs/wateval/wateval/evaluate.py:49: UserWarning: Hypothesis Language seem to be different, please check?
+  warnings.warn("Hypothesis Language seem to be different, please check?")
+BLEU BLEU = 8.83, 39.5/14.4/5.9/2.6 (BP=0.913, ratio=0.917, hyp_len=88982, ref_len=97087)
+
+Traceback (most recent call last):
+  File "/home/dataset/packages/python/3.7/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/dataset/packages/python/3.7/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home2/asvs/wateval/wateval/evaluate.py", line 127, in <module>
+    main()
+  File "/home2/asvs/wateval/wateval/evaluate.py", line 121, in main
+    evaluator = Evaluator.build(args)
+  File "/home2/asvs/wateval/wateval/evaluate.py", line 60, in build
+    return cls(args.references, args.hypothesis, args.lang)
+  File "/home2/asvs/wateval/wateval/evaluate.py", line 47, in __init__
+    self.tgt_lang = self.infer_langs(self.tgt)
+  File "/home2/asvs/wateval/wateval/evaluate.py", line 64, in infer_langs
+    first_line = next(open(fname)).strip()
+FileNotFoundError: [Errno 2] No such file or directory: '/ssd_scratch/cvit/asvs/results/best.hyp.01'
+
+
+EVALUATING ON CKPT_LAST
+-----------------------
+/home2/asvs/fairseq-working/fairseq/tasks/cvit_translation.py:149: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  data = yaml.load(contents)
+/home2/asvs/wateval/wateval/evaluate.py:49: UserWarning: Hypothesis Language seem to be different, please check?
+  warnings.warn("Hypothesis Language seem to be different, please check?")
+BLEU BLEU = 8.80, 39.1/14.1/5.8/2.6 (BP=0.925, ratio=0.927, hyp_len=90032, ref_len=97087)
+
+Traceback (most recent call last):
+  File "/home/dataset/packages/python/3.7/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/dataset/packages/python/3.7/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home2/asvs/wateval/wateval/evaluate.py", line 127, in <module>
+    main()
+  File "/home2/asvs/wateval/wateval/evaluate.py", line 121, in main
+    evaluator = Evaluator.build(args)
+  File "/home2/asvs/wateval/wateval/evaluate.py", line 60, in build
+    return cls(args.references, args.hypothesis, args.lang)
+  File "/home2/asvs/wateval/wateval/evaluate.py", line 47, in __init__
+    self.tgt_lang = self.infer_langs(self.tgt)
+  File "/home2/asvs/wateval/wateval/evaluate.py", line 64, in infer_langs
+    first_line = next(open(fname)).strip()
+FileNotFoundError: [Errno 2] No such file or directory: '/ssd_scratch/cvit/asvs/results/last.hyp.01'
+sending incremental file list
+best.hyp.00
+best.ref.00
+checkpoint_best_translations.txt
+checkpoint_last_translations.txt
+complete.best.hyp
+complete.best.ref
+complete.last.hyp
+complete.last.ref
+last.hyp.00
+last.ref.00
+
+sent 5,841,774 bytes  received 206 bytes  2,336,792.00 bytes/sec
+total size is 23,924,187  speedup is 4.10
+sending incremental file list
+checkpoint_best.pt
+checkpoint_last.pt
+
+sent 1,562,430,364 bytes  received 54 bytes  89,281,738.17 bytes/sec
+total size is 1,562,048,854  speedup is 1.00

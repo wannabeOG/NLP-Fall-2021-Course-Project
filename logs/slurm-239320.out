@@ -1,0 +1,98 @@
+==========================================
+SLURM_JOB_ID = 239320
+SLURM_NODELIST = gnode47
+SLURM_JOB_GPUS = 0,1,2,3
+==========================================
+sending incremental file list
+checkpoint_best.pt
+checkpoint_last.pt
+
+sent 1,371,891,967 bytes  received 54 bytes  20,944,916.35 bytes/sec
+total size is 1,562,048,338  speedup is 1.14
+sending incremental file list
+created directory /ssd_scratch/cvit/asvs/data/pib-en-mar
+./
+dev.mr-en.en
+dev.mr-en.mr
+test.mr-en.en
+test.mr-en.mr
+train.mr-en.en
+train.mr-en.mr
+
+sent 9,910,062 bytes  received 194 bytes  2,831,501.71 bytes/sec
+total size is 37,591,885  speedup is 3.79
+sending incremental file list
+bt.en
+clean_monolingual.mr
+monolingual.mr
+scores.txt
+
+sent 132,568,527 bytes  received 92 bytes  2,525,116.55 bytes/sec
+total size is 539,195,689  speedup is 4.07
+/home2/asvs/fairseq-working/fairseq/tasks/cvit_translation.py:149: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  data = yaml.load(contents)
+Traceback (most recent call last):
+  File "generate.py", line 190, in <module>
+    cli_main()
+  File "generate.py", line 186, in cli_main
+    main(args)
+  File "generate.py", line 104, in main
+    hypos = task.inference_step(generator, models, sample, prefix_tokens)
+  File "/home2/asvs/fairseq-working/fairseq/tasks/fairseq_task.py", line 244, in inference_step
+    return generator.generate(models, sample, prefix_tokens=prefix_tokens)
+  File "/home2/asvs/venv/lib/python3.7/site-packages/torch/autograd/grad_mode.py", line 43, in decorate_no_grad
+    return func(*args, **kwargs)
+  File "/home2/asvs/fairseq-working/fairseq/sequence_generator.py", line 292, in generate
+    tokens[:, :step + 1], encoder_outs, temperature=self.temperature,
+  File "/home2/asvs/venv/lib/python3.7/site-packages/torch/autograd/grad_mode.py", line 43, in decorate_no_grad
+    return func(*args, **kwargs)
+  File "/home2/asvs/fairseq-working/fairseq/sequence_generator.py", line 550, in forward_decoder
+    temperature=temperature,
+  File "/home2/asvs/fairseq-working/fairseq/sequence_generator.py", line 580, in _decode_one
+    decoder_out = list(model.decoder(tokens, encoder_out, incremental_state=self.incremental_states[model]))
+  File "/home2/asvs/venv/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home2/asvs/fairseq-working/fairseq/models/transformer.py", line 394, in forward
+    x = self.output_layer(x)
+  File "/home2/asvs/fairseq-working/fairseq/models/transformer.py", line 460, in output_layer
+    return F.linear(features, self.embed_tokens.weight)
+  File "/home2/asvs/venv/lib/python3.7/site-packages/torch/nn/functional.py", line 1408, in linear
+    output = input.matmul(weight.t())
+RuntimeError: CUDA out of memory. Tried to allocate 2.49 GiB (GPU 0; 10.76 GiB total capacity; 5.82 GiB already allocated; 1.51 GiB free; 2.58 GiB cached)
+/home2/asvs/fairseq-working/fairseq/tasks/cvit_translation.py:149: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  data = yaml.load(contents)
+Traceback (most recent call last):
+  File "generate.py", line 190, in <module>
+    cli_main()
+  File "generate.py", line 186, in cli_main
+    main(args)
+  File "generate.py", line 104, in main
+    hypos = task.inference_step(generator, models, sample, prefix_tokens)
+  File "/home2/asvs/fairseq-working/fairseq/tasks/fairseq_task.py", line 244, in inference_step
+    return generator.generate(models, sample, prefix_tokens=prefix_tokens)
+  File "/home2/asvs/venv/lib/python3.7/site-packages/torch/autograd/grad_mode.py", line 43, in decorate_no_grad
+    return func(*args, **kwargs)
+  File "/home2/asvs/fairseq-working/fairseq/sequence_generator.py", line 292, in generate
+    tokens[:, :step + 1], encoder_outs, temperature=self.temperature,
+  File "/home2/asvs/venv/lib/python3.7/site-packages/torch/autograd/grad_mode.py", line 43, in decorate_no_grad
+    return func(*args, **kwargs)
+  File "/home2/asvs/fairseq-working/fairseq/sequence_generator.py", line 550, in forward_decoder
+    temperature=temperature,
+  File "/home2/asvs/fairseq-working/fairseq/sequence_generator.py", line 580, in _decode_one
+    decoder_out = list(model.decoder(tokens, encoder_out, incremental_state=self.incremental_states[model]))
+  File "/home2/asvs/venv/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home2/asvs/fairseq-working/fairseq/models/transformer.py", line 394, in forward
+    x = self.output_layer(x)
+  File "/home2/asvs/fairseq-working/fairseq/models/transformer.py", line 460, in output_layer
+    return F.linear(features, self.embed_tokens.weight)
+  File "/home2/asvs/venv/lib/python3.7/site-packages/torch/nn/functional.py", line 1408, in linear
+    output = input.matmul(weight.t())
+RuntimeError: CUDA out of memory. Tried to allocate 2.49 GiB (GPU 0; 10.76 GiB total capacity; 5.82 GiB already allocated; 1.51 GiB free; 2.58 GiB cached)
+sending incremental file list
+bt.en
+clean_monolingual.mr
+scores.txt
+
+sent 339 bytes  received 73 bytes  824.00 bytes/sec
+total size is 205  speedup is 0.50
